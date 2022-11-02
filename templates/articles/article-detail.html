@@ -1,0 +1,74 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<!-- <p>
+    分类目录：
+{% for category in categories %}
+ <a href="{{ category.get_absolute_url }}">{{ category.title  }}</a>  </li>
+{% endfor %}
+</p> -->
+分类: {{post.category}}
+
+<h1>{{ post.title }}</h1>
+
+
+<p class="date">
+Published {{ post.publish }} by {{ post.author }}
+</p>
+<p class="date">
+
+    </p>
+    
+<p class="date">
+     {{ post.content |safe}} 
+    </p>
+{% if post.photo  %}
+<p>{{ post.photo }}  <img src="{{ post.photo.url }}" />
+</p>
+{% endif %}
+
+{% if post.file  %}
+<p>
+    <a href="{{ post.file.url }}" download>download file</a>
+</p>
+{% endif %}
+
+{{ post.body|linebreaks }}
+<br/><br/><br/>
+
+
+{% for comment in comments %}
+<div class="comment">
+<p class="info">
+Comment {{ forloop.counter }} by {{ comment.name }}
+{{ comment.created }}
+</p>
+{{ comment.body|linebreaks }}
+</div>
+{% for reply in comment.replies.all %}
+&nbsp;&nbsp;&nbsp;&nbsp;{{reply.name}}:- {{ reply.body }}
+{% endfor%}
+
+
+{% empty %}
+<p>There are no comments yet.</p>
+{% endfor %}
+
+
+{% if new_comment %}
+<h2>Your comment has been added.</h2>
+{% else %}
+
+<hr>
+<br/><br/><br/><br/>
+<h2>Add a new comment</h2>
+<form action="." method="post">
+{{ comment_form.as_p }}
+{% csrf_token %}
+<p><input type="submit" value="Add comment"></p>
+</form>
+{% endif %}
+{% endblock %}
