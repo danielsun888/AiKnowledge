@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
         'haystack',
+    'django_extensions',#加上这个
 
         'articles.apps.ArticlesConfig',
 
@@ -100,6 +101,14 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
+    #  'default': {
+    # 'ENGINE': 'django.db.backends.mysql',
+    # 'HOST':'localhost', # slave server IP
+    # 'PORT': 3306,
+    # 'USER': 'root',
+    # 'PASSWORD': 'fighting',
+    # 'NAME': 'aiknowledge'
+    # }
 }
 
 
@@ -143,3 +152,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+SHELL_PLUS = "ptpython"
+DEBUG = True #原本是False
+PAGINATE_BY=100

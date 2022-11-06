@@ -44,8 +44,8 @@ class Category(models.Model):
 
 
 class Articles(models.Model):
-    title = models.CharField(null=True, blank=True,max_length=255)
-    desc = models.CharField(null=True, blank=True,max_length=255)
+    title = models.TextField(null=True)
+    desc = models.TextField(null=True)
     photo = models.ImageField(null=True,blank=True,upload_to='photos')
     file = models.FileField(null=True,blank=True,upload_to ='files/% Y/% m/% d/')
 
@@ -63,7 +63,7 @@ class Articles(models.Model):
 
     date_created = models.DateTimeField(blank=True, null=True)
     last_updated = models.DateTimeField(blank=True, null=True)
-    url = models.URLField(blank=True, null=True)
+    url = models.URLField(blank=True, null=True,max_length=1000)
    
     def __str__(self):
                 return self.title
@@ -83,7 +83,7 @@ class Comment(models.Model):
 
 
         class Meta:
-            ordering = ['created']
+            ordering = ['updated']
 
         def __str__(self):
             return 'Comment {} by {}'.format(self.body, self.name)

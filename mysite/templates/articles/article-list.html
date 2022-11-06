@@ -13,8 +13,8 @@
     <li>No articles yet.</li>
 {% endfor %}
 </ul> -->
-<ol>{% for article in page_obj %}
-  <li>{{ article.last_updated|date }}   <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  category:{{article.category}}</li>
+<ol>{% for article in articles %}
+  <li>{{ article.last_updated|date }} {{ article.id }}   <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  category:{{article.category}}</li>
   
 {% endfor %}
 </ol>
@@ -23,16 +23,16 @@
   <span class="step-links">
       {% if page_obj.has_previous %}
           <a href="?page=1">&laquo; first</a>
-          <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+          <a href="?page={{ articles.previous_page_number }}">previous</a>
       {% endif %}
 
       <span class="current">
-          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+          Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
       </span>
 
-      {% if page_obj.has_next %}
-          <a href="?page={{ page_obj.next_page_number }}">next</a>
-          <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% if articles.has_next %}
+          <a href="?page={{ articles.next_page_number }}">next</a>
+          <a href="?page={{ articles.paginator.num_pages }}">last &raquo;</a>
       {% endif %}
   </span>
 </div>

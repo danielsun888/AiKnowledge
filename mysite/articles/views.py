@@ -80,21 +80,30 @@ def sendMail(request):
     })
 
 
-class ArticleListView(ListView):
-    template_name = 'articles/article-list.html'
-    articles = Articles.objects.all()
-    Categories=Category.objects.all()
-    model = Articles
-    # paginate_by = settings.PAGINATE_BY
-    paginate_by = 30
+# class ArticleListView(ListView):
+#     template_name = 'articles/article-list.html'
+#     articles = Articles.objects.get_queryset().order_by('last_updated')
+#     Categories=Category.objects.all()
+#     model = Articles
+#     paginate_by = settings.PAGINATE_BY
+#     # paginate_by = 10
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        context['articles'] = self.articles
-        context['categories'] = self.Categories
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['now'] = timezone.now()
+#         context['articles'] = self.articles
+#         context['categories'] = self.Categories
 
-        return context
+#         return context
+def articleView(request):
+    articles= Articles.objects.all()
+    paginate_by = settings.PAGINATE_BY
+
+    paginator = Paginator(articles, paginate_by) # 每页显示25条
+
+    page = request.GET.get('page')
+    article_list = paginator.get_page(page)
+    return render(request, 'articles/article-list.html', {'articles': article_list})
 
 # class CategoryListView(ListView):
 #     template_name = 'articles/category-detail.html'

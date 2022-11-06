@@ -14,7 +14,7 @@ path('mail', sendMail),
 path('socket', socket.as_view()),
 
 
-path(r'',views.ArticleListView.as_view(),name='article-list'),
+path(r'',views.articleView,name='article-list'),
 # path('<int:pk>', views.ArticleDetailView.as_view(), name='article-detail'),
 # path('<int:pk>', views.post_detail, name='post_detail'),
 # url('<int:pk>',views.post_detail,name='post_detail'),
