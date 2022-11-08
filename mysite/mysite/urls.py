@@ -23,7 +23,7 @@ from django.contrib import admin
 #from session import views as session_views
 from django.urls import include
 from django.contrib.auth.views import LoginView,LogoutView
-
+from users import views as user_views
 
 # from chat import views as chatview
 
@@ -57,5 +57,7 @@ urlpatterns = [
 
     path('accounts/login/',  LoginView.as_view()),
     path('accounts/logout/', LogoutView.as_view()),
-       ]
+    path(r'register/', user_views.register, name='register'),]
+
+    
 

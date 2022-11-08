@@ -40,7 +40,9 @@ INSTALLED_APPS = [
         'haystack',
     'django_extensions',#加上这个
 
-        'articles.apps.ArticlesConfig',
+    'articles.apps.ArticlesConfig',
+    'users.apps.UsersConfig',
+
 
 ]
 HAYSTACK_CONNECTIONS = {
@@ -155,3 +157,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 SHELL_PLUS = "ptpython"
 DEBUG = True #原本是False
 PAGINATE_BY=100
+
+
+AUTH_USER_MODEL = 'users.User'
+TIME_ZONE = 'Asia/Seoul'
