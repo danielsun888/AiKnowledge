@@ -12,13 +12,4 @@
 
 ### installation
 <h3> installation
-docker url:https://hub.docker.com/r/youaredaniel/aiknowledge
-docker command: docker pull youaredaniel/aiknowledge
-#### 
-<h4> 四级标题
-
-#####  
-<!-- <h5> 五级标题 -->
-
-######  
-<!-- <h6> 六级标题 -->
+<h4>docker url:https://hub.docker.com/r/youaredaniel/aiknowledge
