@@ -7,3 +7,9 @@ enwiki-latest-abstract.xml
 readme2.md
 readme.ipynb
 *.parquet
+resources/
+Spark/metastore_db
+Spark/spark-warehouse
+Spark/.cache
+Spark/.local
+Spark/data.example
