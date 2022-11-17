@@ -14,7 +14,7 @@
 {% endfor %}
 </ul> -->
 <ol>{% for article in articles %}
-  <li>{{ article.last_updated|date }} {{ article.id }}   <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  category:{{article.category}}</li>
+  <li>{{ article.last_updated|date }}   <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  category:{{article.category}}</li>
   
 {% endfor %}
 </ol>
