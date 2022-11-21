@@ -10,7 +10,6 @@ readme.ipynb
 .cache/
 .ivy2/
 cache_pretrained/
-resources/
 Spark/metastore_db
 Spark/spark-warehouse
 Spark/.cache
