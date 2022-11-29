@@ -20,7 +20,10 @@
 
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{% highlight result.object.title with query %}</a>
+                   {% highlight result.object.title with query %}</a>
+                </p>
+                <p>
+                      <a href="{{ result.object.get_absolute_url }}">{% highlight result.object.text with query %}</a>
                 </p>
             {% empty %}
                 <p>No results found.</p>

@@ -14,16 +14,9 @@
 
 <h1>{{ post.title }}</h1>
 
-
-<p class="date">
-Published {{ post.publish }} by {{ post.author }}
-</p>
-<p class="date">
-
-    </p>
     
 <p class="date">
-     {{ post.content |safe}} 
+     {{ post.text |safe}} 
     </p>
 {% if post.photo  %}
 <p>{{ post.photo }}  <img src="{{ post.photo.url }}" />

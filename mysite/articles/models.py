@@ -9,6 +9,7 @@ from django.urls import reverse
 # from tinymce.models import HTMLField 
 # from mdeditor.fields import MDTextField
 import markdown  # 需要pip进行安装
+from django.contrib.postgres.fields import ArrayField
 
 
 class Category(models.Model):
@@ -44,14 +45,21 @@ class Category(models.Model):
 
 
 class Articles(models.Model):
-    title = models.TextField(null=True)
-    desc = models.TextField(null=True)
-    photo = models.ImageField(null=True,blank=True,upload_to='photos')
-    file = models.FileField(null=True,blank=True,upload_to ='files/% Y/% m/% d/')
+    title = models.TextField(null=True,blank=True)
+    # # desc = models.TextField(null=True)
+    # photo = models.ImageField(null=True,blank=True,upload_to='photos')
+    # file = models.FileField(null=True,blank=True,upload_to ='files/% Y/% m/% d/')
+    bookID=models.BigIntegerField(null=True,blank=True)
+    chapterID=models.BigIntegerField(null=True,blank=True)
+    VerseID=models.BigIntegerField(null=True,blank=True)
+    text = models.TextField(null=True,blank=True)
 
-    content = models.TextField(null=True)
-    hashtags = models.CharField(null=True, blank=True, max_length=300)
-
+    BookName = models.TextField(null=True,blank=True)
+    Volume = models.TextField(null=True,blank=True)
+    keywords=ArrayField(
+            models.CharField(max_length=10, blank=True),
+            size=8,
+        )
     ##ImageFields
     # squareImage = ResizedImageField(size=[1000, 1000], crop=['middle', 'center'], default='default_square.jpg', upload_to='square')
     # landImage = ResizedImageField(size=[2878, 1618], crop=['middle', 'center'], default='default_land.jpg', upload_to='landscape')
@@ -59,17 +67,23 @@ class Articles(models.Model):
     ##Related Fiels
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
 
-    #Utility Variable
+    # #Utility Variable
 
-    date_created = models.DateTimeField(blank=True, null=True)
-    last_updated = models.DateTimeField(blank=True, null=True)
-    url = models.URLField(blank=True, null=True,max_length=1000)
+    # date_created = models.DateTimeField(blank=True, null=True)
+    # last_updated = models.DateTimeField(blank=True, null=True)
+    # url = models.URLField(blank=True, null=True,max_length=1000)
    
     def __str__(self):
                 return self.title
 
     def get_absolute_url(self):
                 return reverse('article-detail', kwargs={'pk': self.pk})
+# |       |  keywords| BookName||Volume|
+class Keyword(models.Model):
+    name = models.CharField(max_length=500)
+    frequency = models.BigIntegerField()
+    def __str__(self):
+        return '{}'.format(self.name)
 
 class Comment(models.Model):
         post = models.ForeignKey(Articles, related_name='comments', on_delete=models.CASCADE)

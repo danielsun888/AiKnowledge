@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import logging
 
 # Create your views here.
 from django.shortcuts import render,HttpResponse
@@ -26,6 +27,10 @@ from django.shortcuts import render, get_object_or_404
 from .forms import  CommentForm
 from django.core.paginator import Paginator
 
+from django.contrib import messages
+
+logger = logging.getLogger(__name__)
+
 # def home(request):
 #     # categories = Category.objects.all()
 #     articles = Articles.objects.all()
@@ -47,36 +52,26 @@ class socket(TemplateView):
 
 
 def sendMail(request):
-
     # create a variable to keep track of the form
     messageSent = False
-
     # check if form has been submitted
     if request.method == 'POST':
-
         form = EmailForm(request.POST)
-
         # check if data from the form is clean
         if form.is_valid():
             cd = form.cleaned_data
             subject = "Sending an email with Django"
             message = cd['message']
-
             # send the email to the recipent
             send_mail(subject, message,
                       settings.DEFAULT_FROM_EMAIL, [cd['recipient']])
-
             # set the variable initially created to True
             messageSent = True
-
     else:
         form = EmailForm()
-
     return render(request, 'articles/mail.html', {
-
         'form': form,
         'messageSent': messageSent,
-
     })
 
 
@@ -96,14 +91,18 @@ def sendMail(request):
 
 #         return context
 def articleView(request):
-    articles= Articles.objects.all()
+    status = request.COOKIES.get('is_login') # 收到浏览器的再次请求,判断浏览器携带的cookie是不是登录成功的时候响应的 cookie
+    # if not status:
+    #     return redirect('/login/login/')
+    username=request.COOKIES.get('username')
+    articles= Articles.objects.all().order_by('id')
     paginate_by = settings.PAGINATE_BY
 
     paginator = Paginator(articles, paginate_by) # 每页显示25条
 
     page = request.GET.get('page')
     article_list = paginator.get_page(page)
-    return render(request, 'articles/article-list.html', {'articles': article_list})
+    return render(request, 'articles/article-list.html', {'articles': article_list,'status':status,'username':username})
 
 # class CategoryListView(ListView):
 #     template_name = 'articles/category-detail.html'

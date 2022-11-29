@@ -1,0 +1,1212 @@
+[2022-11-28 13:00:06,340][Thread-1:123145426423808][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/login]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2022-11-28 13:00:39,529][Thread-3:123145443213312][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/login]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2022-11-28 13:00:45,036][Thread-4:123145426423808][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/login]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[2022-11-28 13:04:24,238][Thread-3:123145396838400][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/login/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'articles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 45, in login
+    return redirect(reverse('articles:article-list'))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'articles' is not a registered namespace
+[2022-11-28 14:34:31,870][Thread-1:123145471393792][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/login/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 43, in login
+    logger.info('user_obj:',user_obj.username)
+AttributeError: 'NoneType' object has no attribute 'username'
+[2022-11-28 15:05:13,870][Thread-1:123145528344576][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 31, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'register' not found. 'register' is not a valid view function or pattern name.
+[2022-11-28 17:40:50,735][Thread-1:123145532706816][task_id:django.request][log.py:241][ERROR][Internal Server Error: /graph/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/bible/views.py", line 28, in graphView
+    verses= Verse.nodes.limit(10)
+AttributeError: 'NodeSet' object has no attribute 'limit'
+[2022-11-28 17:43:41,995][Thread-1:123145386278912][task_id:django.request][log.py:241][ERROR][Internal Server Error: /graph/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/bible/views.py", line 30, in graphView
+    return render(request, 'bible/graph.html', {'verses': verses,'keywords':keywords,'status':status})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'Verse' object is not iterable
+[2022-11-29 10:02:13,689][Thread-5:123145521815552][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50da00>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50da00>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc29b50da00>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50da00>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50da00>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 10:02:13,702][Thread-5:123145521815552][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50cb50>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50cb50>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc29b50cb50>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50cb50>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50cb50>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 10:02:16,777][Thread-5:123145521815552][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50d100>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50d100>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc29b50d100>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50d100>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50d100>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 10:02:16,783][Thread-5:123145521815552][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50de20>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50de20>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fc29b50de20>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50de20>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fc29b50de20>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 10:59:40,019][Thread-1:123145478574080][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 24, in register
+    messages.add_message(request, messages.INFO, 'register successful %s' % form.username)
+AttributeError: 'RegisterForm' object has no attribute 'username'
+[2022-11-29 11:01:38,897][Thread-1:123145495945216][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 24, in register
+    messages.add_message(request, messages.INFO, 'register successful %s' % form.id_username)
+AttributeError: 'RegisterForm' object has no attribute 'id_username'
+[2022-11-29 17:45:58,026][Thread-1:123145543532544][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734778f40>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734778f40>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9734778f40>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734778f40>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734778f40>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 17:45:58,043][Thread-1:123145543532544][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734784d00>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734784d00>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f9734784d00>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734784d00>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f9734784d00>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2022-11-29 18:18:24,169][Thread-1:123145554612224][task_id:django.request][log.py:241][ERROR][Internal Server Error: /graph/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/bible/views.py", line 34, in graphView
+    return render(request, 'bible/graph.html', {'verses': verses,'status':status,'messages':messages})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'module' object is not iterable
+[2022-11-29 18:20:40,304][Thread-1:123145417179136][task_id:django.request][log.py:241][ERROR][Internal Server Error: /graph/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/bible/views.py", line 34, in graphView
+    return render(request, 'bible/graph.html', {'verses': verses,'status':status,'messages':messages})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'module' object is not iterable
+[2022-11-29 18:20:58,576][Thread-1:123145417179136][task_id:django.request][log.py:241][ERROR][Internal Server Error: /graph/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/bible/views.py", line 34, in graphView
+    return render(request, 'bible/graph.html', {'verses': verses,'status':status,'messages':messages})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'module' object is not iterable
+[2022-11-29 18:50:10,934][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'crispy_forms_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+log
+more_like_this
+static
+syntax_color
+tz
+widont
+[2022-11-29 18:51:01,990][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+[2022-11-29 18:51:02,993][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+[2022-11-29 18:51:03,326][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 484, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+[2022-11-29 18:51:48,207][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'crispy_forms_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+log
+more_like_this
+static
+syntax_color
+tz
+widont
+[2022-11-29 18:51:49,432][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'crispy_forms_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+log
+more_like_this
+static
+syntax_color
+tz
+widont
+[2022-11-29 18:51:49,881][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'crispy_forms_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+log
+more_like_this
+static
+syntax_color
+tz
+widont
+[2022-11-29 18:51:50,304][Thread-1:123145477541888][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'crispy_forms_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 27, in register
+    return render(request, 'login/register.html', context={'form': form, 'next': redirect_to})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'crispy_forms_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+debugger_tags
+highlight
+highlighting
+i18n
+indent_text
+l10n
+log
+more_like_this
+static
+syntax_color
+tz
+widont
+[2022-11-29 19:10:30,757][Thread-1:123145552646144][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 55, in register
+    return render (request=request, template_name="main/register.html", context={"register_form":form})
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: main/register.html
+[2022-11-29 19:12:26,336][Thread-1:123145526689792][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 49, in register
+    user = form.save()
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/forms.py", line 22, in save
+    user = super(NewUserForm, self).save(commit=False)
+NameError: name 'NewUserForm' is not defined
+[2022-11-29 19:13:59,317][Thread-1:123145576472576][task_id:django.request][log.py:241][ERROR][Internal Server Error: /login/register/]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/gloria/Documents/GitHub/AiKnowledge/mysite/users/views.py", line 50, in register
+    login(request, user)
+TypeError: login() takes 1 positional argument but 2 were given

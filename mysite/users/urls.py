@@ -1,9 +1,15 @@
-from django.urls import path
+from django.urls import path,re_path
 from . import views
-from django.conf.urls import url
 from django.views.generic import TemplateView
-from .views import *
+from users import views
 # from articles.views import ArticleDetailView
 
+
+
 urlpatterns = [
-    url(r'^register/', views.register, name='register'),]
+    # path(r'^index/', views.index),
+
+    re_path(r'login/', views.login,name='login'),
+    re_path(r'register/', views.register,name='register'),
+    path(r'logout/', views.logout),
+]
