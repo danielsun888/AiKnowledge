@@ -4,7 +4,7 @@
 ## 
 ###  structure
 
-![process](./resources/Search%20engine%20and%20knowledge%20graph%20building2.png)
+![process](./resources/AiKnowledge.png)
 
 
 #####  
