@@ -1,7 +1,7 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm,SetPasswordForm
 from django import forms
 
-from .models import User
+from .models import   User
 
 
 # class RegisterForm(UserCreationForm):
@@ -16,7 +16,7 @@ class RegisterForm(UserCreationForm):
 	email = forms.EmailField(required=True)
 	class Meta:
 		model = User
-		fields = ("sex","username", "email", "password1", "password2")
+		fields = ("username", "email", "password1", "password2")
 
 	def save(self, commit=True):
 		user = super(RegisterForm, self).save(commit=False)
@@ -24,3 +24,7 @@ class RegisterForm(UserCreationForm):
 		if commit:
 			user.save()
 		return user
+class setPasswordForm(SetPasswordForm):
+    class Meta:
+        model = User
+        fields = ['new_password1', 'new_password2']

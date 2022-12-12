@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+<script>
+  console.log("{{Verses | safe}}")
+
+</script>
+{% block content %}
+<!-- <form class="form-inline ml-3-md" action="{% url 'mypage' %}" method="get">
+  {% csrf_token %}
+  <div class="input-group">
+    <h2>Change language</h2><hr>
+
+       <input name="next" type="hidden" value="{{ redirect_to }}" />
+       <select name="language" class="form-control">
+           {% get_current_language as LANGUAGE_CODE %}
+           {% get_available_languages as LANGUAGES %} -->
+           <!-- {% get_language_info_list for LANGUAGES as languages %}
+           {% for language in languages %}
+               <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                   {{ language.name_local }}
+               </option>
+           {% endfor %}
+       </select>
+      <div class="input-group-append">
+       <button type="submit" class="btn btn-inline btn-sm bg-warning">
+           {% trans "Select" %}
+       </button>
+      </div>
+  </div>
+</form> -->
+
+
+<h2>the verses I lik totally : {{ Verses |length }}</h2><hr>
+
+<ol>{% for i in Verses %}
+  <li> <a href="{{ article.get_absolute_url }}">{{ i.verse.BookName  }} {{ i.verse.chapterID  }}: {{  i.verse.VerseID  }}</a>  {{    i.verse.text  }}     
+  </li>
+{% endfor %}
+</ol>
+
+    <div class="content-section">
+        <h2>Password Reset Confirm</h2><hr>
+        <p>Please enter your new password.</p>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-6">
+                  {{ form.new_password1|as_crispy_field }}
+                </div>
+                <div class="col-6">
+                  {{ form.new_password2|as_crispy_field }}
+                </div>
+              </div>
+          
+            <button class="btn btn-success" type="submit">Reset password</button>
+        </form>
+    
+    
+    </div>
+
+      {% endblock %}

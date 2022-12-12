@@ -1,10 +1,97 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
+{% load i18n %}
 {% block content %}
-<!-- {% for category in categories %}
+
+
+    
+<script>
+  console.log("{{log_info | safe}}")
+
+//  var subjectObject = {
+//   "old testament": {
+//     "genesis": [1,2,3,4,5],
+//     "daniel": [1,2,3,4,5,6],
+//   },
+//   "new testament": {
+//     "mattew": [1,2,3,4,5],
+//   }
+// }
+var subjectObject={{ books|safe }}
+window.onload = function() {
+  var subjectSel = document.getElementById("testament");
+  var topicSel = document.getElementById("book");
+  var chapterSel = document.getElementById("chapter");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+//empty Chapters- and Topics- dropdowns
+chapterSel.length = 1;
+ topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+  topicSel.onchange = function() {
+ //empty Chapters dropdown
+chapterSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+
+
+
+</script>
+
+  {% get_available_languages as languages %}
+  
+  {% for lang_code, lang_name in languages %}
+      {% language lang_code %}
+      <a href="{% url 'index'  %}">{{ lang_name }}</a>
+      {% endlanguage %}
+  {% endfor %}
+<!--  language change -->
+{% get_language_info_list for available_languages as langs %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% language 'en' %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <!-- Current language: {{ LANGUAGE_CODE }} -->
+{% endlanguage %}
+{%trans "Welcome to my site." %}
+
+{%trans "Bible" %}
+
+<form method="post" id="form1" action="{% url 'index' %}">
+  <div class="form-row">
+
+  {% csrf_token %}
+  {% trans "Testament" %}: <select class="form-control form-control-sm" name="testament" id="testament" required="true">
+    <option  selected="selected">{% trans "Select testament" %}</option>
+  </select>
+  <br><br>
+  {% trans "Books" %}: <select  class="form-control form-control-sm" name="book" id="book" required="true">
+    <option value="" selected="selected">{% trans "Please select book first" %}</option>
+  </select>
+  <br><br>
+  {% trans "Chapters" %}: <select class="form-control form-control-sm"  name="chapter" id="chapter" required="true">
+    <option value="" selected="selected">{% trans "Please select chapter first" %}</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">  
+  </div>
+</form>
+ <!-- {% for category in categories %}
    <a href="{{ category.get_absolute_url }}">{{ category.title  }}</a>  </li>
-{% endfor %} -->
+{% endfor %} --> 
 
 <!-- <ul>
 {% for article in articles %}
@@ -13,27 +100,64 @@
     <li>No articles yet.</li>
 {% endfor %}
 </ul> -->
+<ol>
+<!-- <form action="{% url 'index' %}" method='POST'>
+	{% csrf_token %}
+	{{ form }}  
+   <div class='fieldWrapper'> <p><input type='submit' value='submit'></p></div>
+</form> -->
+</ol>
+
+
+
 <ol>{% for article in articles %}
-  <li> <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a> {{ article.text  }} </li>
+  <li> <a href="{{ article.get_absolute_url }}">{{ article.BookName  }} {{ article.chapterID  }}: {{ article.VerseID  }}</a>  {{   article.text  }}     <a class="likebutton" id="like{{article.id}}" href="#" data-catid="{{ article.id }}">Like</a>
+  </li>
   
 {% endfor %}
 </ol>
-
+<ol>{% for keyword in keywordList %}
+ <a href="keyword?id={{ keyword.id }}"> {{ keyword.name  }}</a>{{ keyword.frequency }} </li>
+  
+{% endfor %}
+</ol>
 <div class="pagination">
-  <span class="step-links">
-      {% if page_obj.has_previous %}
-          <a href="?page=1">&laquo; first</a>
-          <a href="?page={{ articles.previous_page_number }}">previous</a>
-      {% endif %}
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?chapter=1">&laquo; {% trans "first" %}</a>
+            <a href="?chapter={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+        {% endif %}
 
-      <span class="current">
-          Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
-      </span>
+        <span class="current">
+            chapter {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
 
-      {% if articles.has_next %}
-          <a href="?page={{ articles.next_page_number }}">next</a>
-          <a href="?page={{ articles.paginator.num_pages }}">last &raquo;</a>
-      {% endif %}
-  </span>
+        {% if page_obj.has_next %}
+            <a href="?chapter={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+            <a href="?chapter={{ page_obj.paginator.num_pages }}">{% trans "last" %} &raquo;</a>
+        {% endif %}
+    </span>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+$('.likebutton').click(function(){
+var catid;
+catid = $(this).attr("data-catid");
+console.log(catid);
+$.ajax(
+{
+    type:"GET",
+    url: "/articles/likepost",
+    data:{
+             post_id: catid
+    },
+    success: function( data ) 
+    {
+        $( '#like'+ catid ).remove();
+        $( '#message' ).text(data);
+    }
+ })
+});
+</script>
 {% endblock %}
+

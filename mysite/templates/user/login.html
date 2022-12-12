@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block content %}
+     <div style="margin: 15% 40%;">
+        <h1>welcome to login!</h1>
+       <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+            <p>
+                <label for="id_username">username:</label>
+                <input type="text" id="username" name="username" placeholder="username" autofocus required />
+            </p>
+          
+            <p>
+                <label for="id_password">password:</label>
+                <input type="password" id="password" placeholder="password" name="password" required >
+            </p>
+            <button type="reset" class="btn btn-default pull-left">reset</button>
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    {% endblock %}

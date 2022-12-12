@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="zh-hans">
+  <head>
+    {% load static %}
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% load static %}
+    <!-- <script src="{% static 'js/index.js' %}"></script> - -->
+    <title> Bible</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'pinterest/dist/css/index.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'pinterest/dist/css/pins.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'pinterest/dist/css/nav.css' %}" />
+    <link rel="shortcut icon" href="{% static 'pinterest/assets/favicon.ico' %}" /> -->
+
+    {% endblock %}
+</head>
+<body>
+  <div id="app" class="container">
+    <div class="center">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <h2><a href="{% url 'index' %}">Bible</a></h2>
+                <ul class="nav justify-content-center">
+<!--                    
+                    {% for category in categories %}
+                    <li class="nav-item"> <a class="nav-link" href="{{ category.get_absolute_url }}">{{ category.title  }}</a>  </li>
+                    {% endfor %}                     -->
+                
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'keywordList' %}">keywords</a>
+                    </li>
+                
+                    <li class="nav-item">
+                      <a class="nav-link" href="/search/">search</a>
+                    </li>
+                    <!-- <li>     <form class="navbar-form navbar-left">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                  </li> -->
+                  <ul class="nav navbar-nav navbar-right">
+                    {% if username %}
+                    <li>{{username}}</a></li>
+                    {% endif %}
+
+                    {% if status %}
+                    <li class="nav-item">
+                    <a href="{% url 'logout' %}">logout</a></li>
+                    <li class="nav-item">
+                      <a href="{% url 'mypage' %}">mypage</a>
+                    </li>
+                    {% else %}
+                    <!-- <li><a href="/login/login/">login</a></li> -->
+
+                    <li><a href="{% url 'login' %}">login</a></li>
+                    <li><a href="{% url 'register' %}">register</a></li>
+                    {% endif %}
+                  </ul>
+                  {% if messages %}
+                  <ul class="messages">
+                      {% for message in messages %}
+                      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                      {% endfor %}
+                  </ul>
+                  {% endif %}
+
+            </div>
+      
+          </nav>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+          <!-- Bootstrap compiled and minified JavaScript -->
+          <!-- Vendor scripts -->
+          <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+          <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+          <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+          <script src="https://unpkg.com/masonry-layout@4.2.0/dist/masonry.pkgd.min.js"></script>
+          <script src="https://unpkg.com/interactjs@1.3.0/dist/interact.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.0/echarts.min.js"></script>
+
+          <!-- Custom scripts -->
+          <!-- <script src="{% static 'js/drag-and-drop.js' %}"></script>
+          <script src="{% static 'js/infinite-scroll.js' %}"></script>
+          <script src="{% static 'js/index.js' %}"></script> -->
+          <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    {% block content %}
+    
+    {% endblock %}
+
+
+    <!-- <footer class="footer">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-12">copyright© 2021 -<a href="/">My site</a</div>
+            </div>
+
+        </div>
+    </footer> -->
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+

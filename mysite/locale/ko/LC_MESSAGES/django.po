@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-09 12:28+0900\n"
+"PO-Revision-Date: 2022-12-09 03:32+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: articles/models.py:65 articles/models.py:80
+msgid "name"
+msgstr "이름"
+
+#: articles/models.py:66
+msgid "frequency"
+msgstr "빈도수"
+
+#: articles/models.py:71
+msgid "title"
+msgstr "제목"
+
+#: articles/models.py:77
+msgid "chapterName"
+msgstr "장 이름"
+
+#: articles/tests.py:17
+#| msgid "Select testament"
+msgid "Testament"
+msgstr "신약 구약 선택"
+
+#: articles/tests.py:17
+msgid "Books"
+msgstr "책들"
+
+#: articles/tests.py:17
+#| msgid "chapterName"
+msgid "Chapters"
+msgstr "장 이름"
+
+#: articles/tests.py:17
+msgid "Submit"
+msgstr "제출"
+
+#: articles/tests.py:17
+msgid "Please select book first"
+msgstr "먼저 책을 선택하세요"
+
+#: articles/tests.py:18
+msgid "Please select chapter first"
+msgstr "먼저 챕터를 선택하세요"
+
+#: articles/tests.py:18
+msgid "first"
+msgstr "첫번째"
+
+#: articles/tests.py:18
+msgid "previous"
+msgstr "이전의"
+
+#: articles/tests.py:18
+msgid "next"
+msgstr "다음"
+
+#: articles/tests.py:18
+msgid "last"
+msgstr "마지막"
+
+#: mysite/settings.py:277
+msgid "English"
+msgstr "영어"
+
+#: mysite/settings.py:278
+msgid "简体中文"
+msgstr "중국어"
+
+#: mysite/settings.py:279
+msgid "한국어"
+msgstr ""
+
+#: templates/articles/article-list.html:65
+msgid "Welcome to my site."
+msgstr "환영합니다"
+
+#: templates/articles/article-list.html:67 templates/base.html:13
+#: templates/base.html:32
+msgid "Bible"
+msgstr "성경"
+
+#: templates/articles/article-list.html:72
+msgid "Select testament"
+msgstr "신약 구약 선택"
+
+#: templates/articles/test.html:43 templates/user/mypage.html:24
+msgid "Select"
+msgstr "선택"
+
+#: templates/articles/test.html:54
+msgid "Current language code"
+msgstr "현재 언어 코드"
+
+#: templates/articles/test.html:55
+msgid "Welcome to our page"
+msgstr "환영합니다"
+
+#: templates/articles/test.html:57
+#, python-format
+msgid " %(msg)s "
+msgstr ""
+
+#: templates/articles/test.html:69
+msgid "Privacy and Cookie"
+msgstr "개인 정보 및 쿠키"
+
+#: templates/articles/test.html:70
+msgid "Terms and Conditions"
+msgstr "조건"
+
+#: templates/base.html:40
+msgid "keywords"
+msgstr "키워드"
+
+#: templates/base.html:44
+msgid "search"
+msgstr "검색"
+
+#: templates/base.html:60
+msgid "logout"
+msgstr "로그아웃"
+
+#: templates/base.html:62
+msgid "mypage"
+msgstr "내 페이지"
+
+#: templates/base.html:67
+msgid "login"
+msgstr "로그 인"
+
+#: templates/base.html:68
+msgid "register"
+msgstr "회원가입"

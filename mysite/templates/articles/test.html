@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+    <p id="message"></p>
+    {% for post in posts %}
+    <h3>{{ forloop.counter }}) {{ post.title }}</h3>
+    <p>{{ post.text }} </p>
+    <a class="likebutton" id="like{{post.id}}" href="#" data-catid="{{ post.id }}">Like</a>
+    {% endfor %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $('.likebutton').click(function(){
+    var catid;
+    catid = $(this).attr("data-catid");
+    console.log(catid);
+    $.ajax(
+    {
+        type:"GET",
+        url: "/articles/likepost",
+        data:{
+                 post_id: catid
+        },
+        success: function( data ) 
+        {
+            $( '#like'+ catid ).remove();
+            $( '#message' ).text(data);
+        }
+     })
+});
+</script>
+
+
+<!-- <script>
+function showHint(str)
+{
+  var xmlhttp;
+  if (str.length==0)
+  { 
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest)
+  {
+    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  var url="/articles/likepost/"+str
+  console.log(url)
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send();
+}
+</script> -->
+<!-- <script> $('.likebutton').click(function(){
+    var catid;
+    catid = $(this).attr("data-catid");
+    $.ajax(
+    {
+        type:"GET",
+        url: "/likepost",
+        data:{
+                 post_id: catid
+        },
+        success: function( data ) 
+        {
+            $( '#like'+ catid ).remove();
+            $( '#message' ).text(data);
+        }
+     })</script> -->
+
+<!-- <body> -->
+
+<!-- <h3>在输入框中尝试输入字母 a:</h3>
+<form action=""> 
+输入姓名: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+<p>提示信息: <span id="txtHint"></span></p> 
+
+</body> -->
+{% endblock %}

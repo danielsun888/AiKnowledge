@@ -41,12 +41,10 @@ INSTALLED_APPS = [
     'django_extensions',#加上这个
     'articles.apps.ArticlesConfig',
     'users.apps.UsersConfig',
-    'bible.apps.BibleConfig',
-        'crispy_forms',
-
-
-    
-
+    'graph.apps.GraphConfig',
+    'crispy_forms',
+    'rosetta',  # NEW
+    # 'parler',  # NEW
 
 ]
 HAYSTACK_CONNECTIONS = {
@@ -60,11 +58,14 @@ HAYSTACK_CONNECTIONS = {
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'django.middleware.locale.LocaleMiddleware', # 新增多语支持
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # 'user_language_middleware.UserLanguageMiddleware',
+
 ]
 
 ROOT_URLCONF = "mysite.urls"
@@ -138,16 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
-
-TIME_ZONE = "UTC"
-
-USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -167,7 +159,6 @@ APPEND_SLASH=False
 
 
 AUTH_USER_MODEL = 'users.User'
-TIME_ZONE = 'Asia/Seoul'
 
 # Neo4j_DATABASE_URL = 'bolt://daniel:fighting@localhost:7687/aiknowledge'  # default
 # graph = Graph("neo4j://localhost:7687", auth=("daniel", "fighting"),name="aiknowledge")
@@ -205,7 +196,7 @@ LOGGING = {
     'handlers': {
         # 在终端打印
         'console': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'filters': ['require_debug_true'],  # 只有在Django debug为True时才在屏幕打印日志
             'class': 'logging.StreamHandler',  #
             'formatter': 'simple'
@@ -244,9 +235,9 @@ LOGGING = {
     'loggers': {
         # 默认的logger应用如下配置
         '': {
-            'handlers': ['default', 'console', 'error'],  # 上线之后可以把'console'移除
+            'handlers': ['default', 'error'],  # 上线之后可以把'console'移除
             'level': 'DEBUG',
-            'propagate': True,  # 向不向更高级别的logger传递
+            'propagate': False,  # 向不向更高级别的logger传递
         },
         # 名为 'collect'的logger还单独处理
         'collect': {
@@ -255,3 +246,51 @@ LOGGING = {
         }
     },
 }
+LOGIN_URL = '/login/login/'  #这个路径需要根据你网站的实际登陆地址来设置
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CACHES = {
+    # … default cache config and others
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+
+# Tell select2 which cache configuration to use:
+from django.utils.translation import gettext_lazy as _
+
+# 默认语言
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'UTC'
+
+# 设置I18n和L10N为True
+USE_I18N = True
+USE_L10N = True
+USE_TZ= True
+# 指定支持语言。这里为了简化只支持简体中文和英文
+LANGUAGES = (
+    ('en', _('English')),
+    ('zh-hans', _('简体中文')),
+    ('ko', _('한국어')),
+)
+
+# 用于存放django.po和django.mo编译过的翻译文件
+PROJECT_ROOT = os.path.dirname(os.path.realpath(__name__))
+LOCALE_PATHS = (
+    os.path.join(PROJECT_ROOT, 'locale'),
+)
+# PARLER_LANGUAGES = {
+#     None: (
+#         {'code': 'en',}, # English
+#         {'code': 'zh-Hans',}, # French
+#     ),
+#     'default': {
+#         'fallbacks': ['en'],
+#         'hide_untranslated': False,
+#     }
+# }

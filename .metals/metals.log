@@ -306,3 +306,4 @@ Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-notebook-
 2022.11.23 15:54:45 INFO  time: initialize in 5.64s
 2022.11.23 15:54:50 WARN  Build server is not auto-connectable.
 2022.11.23 15:54:50 WARN  no build tool detected in workspace '/Users/gloria/Documents/GitHub/AiKnowledge'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.11.30 10:13:40 INFO  shutting down Metals

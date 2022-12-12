@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+{% block content %}
+<div class="container"   style=" display: flex;
+     flex-direction: row ";>
+
+{% regroup websitetList by category as category_list %}
+   {% for category in category_list %}
+   <div class="container overflow-hidden  ;">
+         <div class=".col-4" style=" display: flex;
+     flex-direction: column; ">
+             <div class=".col-sm-4" style=" display: flex; flex-direction: column; "><p class="h1" >{{ category.grouper}}</p></div>
+         {% for website in category.list %}
+             <div  style=" display: flex; flex-direction: column"><a  href="{{website.url}}" target="_blank" > {{website.title}}</a></p></div>
+         {% endfor %}
+         </div>
+   </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+ <!---  <a href="/logout/">logout</a>--->

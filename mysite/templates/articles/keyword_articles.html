@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- {% for category in categories %}
+   <a href="{{ category.get_absolute_url }}">{{ category.title  }}</a>  </li>
+{% endfor %} -->
+
+
+<!-- <ul>
+{% for article in articles %}
+    <li>{{ article.last_updated|date }} -   <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  category:{{article.category}}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul> -->
+<h1>{{keyword.name}} verses:{{keyword.frequency}}</h1>
+<ol>{% for article in page_obj %}
+
+    <!-- <li>  <a href="{{ article.get_absolute_url }}">{{ article.title  }}</a>  </li> -->
+    <li> <a href="{{ article.get_absolute_url }}">{{ article.BookName  }} {{ article.chapterID  }}: {{ article.VerseID  }}</a>  {{   article.text  }} </li>
+
+  {% endfor %}
+  </ol>
+  
+  <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?id={{keyword.id}}&page=1">&laquo; first</a>
+            <a href="?id={{keyword.id}}&page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+  
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+  
+        {% if page_obj.has_next %}
+            <a href="?id={{keyword.id}}&page={{ page_obj.next_page_number }}">next</a>
+            <a href="?id={{keyword.id}}&page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+  </div>
+{% endblock %}

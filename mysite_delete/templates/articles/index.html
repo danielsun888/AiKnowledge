@@ -1,0 +1,14 @@
+<head>
+  {% load static %}
+  <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+      {% for article in articles %}
+          
+          <p> title:{{article.title}}  category:{{article.category}} </p>
+
+      {% endfor %}
+  </body>
+  <script src="{% static 'tinymce/js/prism.js' %}"></script>
