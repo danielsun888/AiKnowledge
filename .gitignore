@@ -24,3 +24,17 @@ Spark/data/
 *.json
 Resources/
 data/
+.cache/
+.config/
+.ipynb_checkpoints/
+.ipython
+.ivy2/
+.javacpp/
+.jupyter/
+.local/
+.metals/
+.vscode/
+.github
+.bash_history
+.python_history
+derby.log
