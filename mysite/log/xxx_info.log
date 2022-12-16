@@ -17012,3 +17012,13 @@ Traceback (most recent call last):
   File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 606, in find_filter
     raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
 django.template.exceptions.TemplateSyntaxError: Invalid filter: 'number'
+[2022-12-13 07:01:46,137][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][GET http://127.0.0.1:9200/ [status:200 request:0.568s]]
+[2022-12-13 07:01:46,260][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][GET http://127.0.0.1:9200/nivbible/_mapping [status:200 request:0.121s]]
+[2022-12-13 07:01:46,395][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][PUT http://127.0.0.1:9200/nivbible [status:400 request:0.134s]]
+[2022-12-13 07:01:46,905][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][PUT http://127.0.0.1:9200/nivbible/_mapping [status:200 request:0.510s]]
+[2022-12-13 07:01:47,351][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][POST http://127.0.0.1:9200/nivbible/_search?_source=true [status:200 request:0.444s]]
+[2022-12-13 07:07:51,841][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][POST http://127.0.0.1:9200/nivbible/_search?_source=true [status:200 request:0.050s]]
+[2022-12-13 07:07:51,878][Thread-41:123145506701312][task_id:elasticsearch][base.py:265][INFO][POST http://127.0.0.1:9200/nivbible/_search?_source=true [status:200 request:0.036s]]
+[2022-12-15 04:47:21,025][MainThread:140704362947776][task_id:django.utils.autoreload][autoreload.py:677][INFO][Watching for file changes with StatReloader]
+[2022-12-15 04:47:26,320][Thread-1:123145491320832][task_id:django.request][log.py:241][WARNING][Not Found: /favicon.ico]
+[2022-12-15 04:47:36,650][Thread-3:123145524899840][task_id:django.request][log.py:241][WARNING][Not Found: /favicon.ico]

@@ -22,4 +22,5 @@ Models/haystack/
 Spark/data/
 .javacpp/
 *.json
-Resources/venv
+Resources/
+data/
