@@ -9699,3 +9699,125 @@ Traceback (most recent call last):
   File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/django/template/base.py", line 606, in find_filter
     raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
 django.template.exceptions.TemplateSyntaxError: Invalid filter: 'number'
+[2023-01-31 04:33:47,220][Thread-1:123145553952768][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7af0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7af0>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f90faae7af0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7af0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7af0>: Failed to establish a new connection: [Errno 61] Connection refused)
+[2023-01-31 04:33:47,230][Thread-1:123145553952768][task_id:haystack][elasticsearch_backend.py:595][ERROR][Failed to query Elasticsearch using '(create)': ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7c10>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7c10>: Failed to establish a new connection: [Errno 61] Connection refused)]
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 255, in perform_request
+    response = self.pool.urlopen(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f90faae7c10>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/haystack/backends/elasticsearch_backend.py", line 585, in search
+    raw_results = self.conn.search(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/utils.py", line 347, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/client/__init__.py", line 1821, in search
+    return self.transport.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 417, in perform_request
+    self._do_verify_elasticsearch(headers=headers, timeout=timeout)
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 606, in _do_verify_elasticsearch
+    raise error
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/transport.py", line 569, in _do_verify_elasticsearch
+    _, info_headers, info_response = conn.perform_request(
+  File "/Users/gloria/opt/anaconda3/envs/AiKnowledge/lib/python3.9/site-packages/elasticsearch/connection/http_urllib3.py", line 280, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7c10>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f90faae7c10>: Failed to establish a new connection: [Errno 61] Connection refused)

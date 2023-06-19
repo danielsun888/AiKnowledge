@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Zeppelin connection" read-only="true" uuid="14d2e956-bd24-4ebb-a41a-501676188ba0">
+      <synchronize>true</synchronize>
+      <remarks>Wrapper For Zeppelin Spark from Big Data Tools plugin</remarks>
+      <jdbc-driver>com.dbschema.ZeppelinSparkJdbcDriver</jdbc-driver>
+      <jdbc-url>Zeppelin connection@ZeppelinConnections@7629948283060962483</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="connectionId" value="Zeppelin connection@ZeppelinConnections@7629948283060962483" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="aiknowledge@localhost" uuid="253d1e13-f0da-496e-90fc-6cd9b723fbef">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/aiknowledge</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="db.sqlite3" uuid="e69552e3-be4e-42a5-ba89-2dbcc9735ee5">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../wagtail/mysite/db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

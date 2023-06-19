@@ -45,6 +45,21 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rosetta',  # NEW
     # 'parler',  # NEW
+    ## wagtail
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail',
+
+    'modelcluster',
+    'taggit',
 
 ]
 HAYSTACK_CONNECTIONS = {
@@ -65,6 +80,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     # 'user_language_middleware.UserLanguageMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+
 
 ]
 
@@ -139,7 +156,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+WAGTAIL_SITE_NAME = 'My Example Site'
+WAGTAILADMIN_BASE_URL = '/admin/'
 
 
 # Static files (CSS, JavaScript, Images)
